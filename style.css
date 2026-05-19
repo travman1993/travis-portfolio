@@ -1,0 +1,43 @@
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1 {
+    background: grey
+    
+}
+
+a:hover,
+a:focus {
+    outline: 3px solid #60a5fa;
+    outline-offset: 4px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto;
+        transition: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 4rem;
+    }
+
+    .project-card {
+        padding: 3rem;
+    }
+}
