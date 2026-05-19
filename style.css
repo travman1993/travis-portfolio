@@ -3,9 +3,7 @@ body {
     line-height: 1.6;
 }
 
-h1 {
-    background: grey
-    
+h1 {    
 }
 
 a:hover,
@@ -14,7 +12,7 @@ a:focus {
     outline-offset: 4px;
 }
 
-.hero-buttons {
+.hero-button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
