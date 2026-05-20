@@ -27,6 +27,23 @@ body {
     line-height: 1.6;
 }
 
+/* --- Fade In --- */
+.fade-target {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 500msease, transform 500ms ease;
+}
+
+.fade-target.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Active nav link --- */
+nav a.active {
+    color: var(--accent);
+}
+
 /* --- Skip Link --- */
 .skip-link {
     position: absolute;
