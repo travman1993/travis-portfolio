@@ -4,7 +4,7 @@
     --text: #e2e8f0;
     --text-muted: #94a3b8;
     --accent: #60a5fa;
-    --border: #60a5fa;
+    --border: #334155;
     --radius: 0.5rem;
     --ease: 200ms ease;
 }
@@ -31,7 +31,7 @@ body {
 .fade-target {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 500msease, transform 500ms ease;
+    transition: opacity 500ms ease, transform 500ms ease;
 }
 
 .fade-target.visible {
@@ -240,6 +240,8 @@ section >:last-of-type {
 .project-card ul li {
     background: rgba(96, 165, 250, 0.08);
     color: var(--accent);
+    padding: 0.2rem 0.75rem;
+    border: 1px solid rgba(96, 165, 250, 0.2);
     border-radius: 999px;
     font-size: 0.8rem;
     font-weight: 500;
@@ -267,7 +269,7 @@ footer {
     margin: 0 auto;
     padding: 2rem 1.5rem;
     display: flex;
-    flex-direction: colomn;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
     text-align: center;
@@ -286,7 +288,7 @@ footer p {
 .footer-links a {
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.875;
+    font-size: 0.875rem;
     transition: color var(--ease);
 }
 
@@ -309,7 +311,7 @@ footer p {
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
-        transition-duration: 0.01ma !important;
+        transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
 }

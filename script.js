@@ -6,7 +6,7 @@ subtitle.style.visibility = 'visible';
 
 let i = 0;
 function type() {
-    if (i < text.lengeth) {
+    if (i < text.length) {
         subtitle.textContent += text[i++];
         setTimeout(type, 45);
     }
@@ -18,7 +18,7 @@ const observer = new IntersectionObserver(
     (entries) => entries.forEach(el => {
         if (el.isIntersecting) {
             el.target.classList.add('visible');
-            observer.unobserve(el.terget);
+            observer.unobserve(el.target);
         }
     }),
     { threshold: 0.15 }
@@ -37,7 +37,7 @@ const navObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                navLinks.forEach(a => aclassList.remove('active'));
+                navLinks.forEach(a => a.classList.remove('active'));
                 const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
                 if (active) active.classList.add('active');
             }
