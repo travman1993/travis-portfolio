@@ -278,3 +278,21 @@ footer p {
     color: var(--accent);
     outline: none;
 }
+
+/* --- Desktop --- */
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ma !important;
+        scroll-behavior: auto !important;
+    }
+}
