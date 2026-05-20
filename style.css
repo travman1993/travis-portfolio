@@ -277,12 +277,19 @@ section >:last-of-type {
 .skills-list li {
     background: var(--bg-surface);
     border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 0.4rem 1rem;
+    color: var(--text);
+    padding: 0.5rem 1.1rem;
     border-radius: 999px;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     transition: border-color var(--ease), color var(--ease);
+}
+
+.skills-list li i {
+    font-size: 1.1rem;
 }
 
 .skills-list li:hover {
@@ -420,7 +427,7 @@ footer p {
     .about-sidebar {
         width: 240px;
     }
-    
+
     footer {
         flex-direction: row;
         justify-content: space-between;
