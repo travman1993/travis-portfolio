@@ -1,5 +1,5 @@
 :root {
-    --bg: #0f172a;
+    --bg: #172c40;
     --bg-surface: #1e293b;
     --text: #e2e8f0;
     --text-muted: #94a3b8;
@@ -75,9 +75,10 @@ a:focus-visible {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(15, 23, 41, 0.85);
+    background: rgba(0, 0, 0, 0.455);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
+    border-radius: 0 0 10px 10px;
 }
 
 nav {
@@ -124,6 +125,17 @@ main {
     justify-content: center;
     text-align: center;
     padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 63% 50% at 50% 40%, rgba(98, 147, 206, 0.305) 0%, transparent 80%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-content {
@@ -131,6 +143,8 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -181,6 +195,15 @@ main {
     outline: none;
 }
 
+.hero-photo {
+    width: 140px;
+    height: 170px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    margin-bottom: 0.5rem;
+}
+
 /* --- Sections --- */
 section {
     padding: 5rem 0;
@@ -201,6 +224,32 @@ section > p {
 
 section >:last-of-type {
     margin-bottom: 0;
+}
+
+/* --- Skills --- */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    
+}
+
+.skills-list li {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: border-color var(--ease), color var(--ease);
+}
+
+.skills-list li:hover {
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 /* --- Project Card --- */
@@ -260,6 +309,30 @@ section >:last-of-type {
 .project-links a:focus-visible {
     border-color: var(--accent);
     outline: none;
+}
+
+.card-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 2px);
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+}
+
+.card-placeholder {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.08) 0%, rgba(96, 165, 250, 0.04) 100%);
+    border: 1px dashed rgba(96, 165, 250, 0.3);
+    border-radius: calc(var(--radius) - 2px);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
 }
 
 /* --- Footer --- */
