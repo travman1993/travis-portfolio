@@ -216,14 +216,52 @@ section h2 {
     margin-bottom: 1.5rem;
 }
 
-section > p {
-    color: var(--text-muted);
-    max-width: 65ch;
-    margin-bottom: 1rem;
-}
-
 section >:last-of-type {
     margin-bottom: 0;
+}
+
+/* --- About layout --- */
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-main p {
+    color: var(--text-muted);
+    max-width: 65ch;
+}
+
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    flex-shrink: 0;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+}
+
+.sidebar-label {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 /* --- Skills --- */
@@ -373,6 +411,16 @@ footer p {
 
 /* --- Desktop --- */
 @media (min-width: 768px) {
+    #about {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .about-sidebar {
+        width: 240px;
+    }
+    
     footer {
         flex-direction: row;
         justify-content: space-between;
