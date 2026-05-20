@@ -46,7 +46,7 @@ body {
     top: 1rem;
 }
 
-/* --- Focus ---*/
+/* --- Focus --- */
 a:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 4px;
@@ -90,4 +90,98 @@ nav a:hover,
 nav a:focus-visible {
     color: var(--accent);
     outline: none;
+}
+
+/* --- Layout --- */
+main {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Hero --- */
+.hero {
+    min-height: calc(100vh - 57px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    color: var(--accent);
+    font-size: clamp(0.875rem, 2vw, 1.05rem);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+.hero-description {
+    color: var(--text-muted);
+    max-width: 44ch;
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+}
+
+.hero-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.hero-button a {
+    display: inline-block;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color var(--ease), color var(--ease), transform var(--ease);
+}
+
+.hero-button a:hover,
+.hero-button a:focus-visible {
+    background-color: var(--accent);
+    color: var(--bg);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* --- Sections --- */
+section {
+    padding: 5rem 0;
+    border-top: 1px solid var(--border);
+}
+
+section h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+section > p {
+    color: var(--text-muted);
+    max-width: 65ch;
+    margin-bottom: 1rem;
+}
+
+section >:last-of-type {
+    margin-bottom: 0;
 }
