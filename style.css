@@ -297,6 +297,21 @@ section >:last-of-type {
     color: var(--accent);
 }
 
+/* --- Featured Badge --- */
+.featured-badge {
+    display: inline-block;
+    background: rgba(96, 165, 250, 0.12);
+    color: var(--accent);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    border-radius: 999px;
+    padding: 0.2rem 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
 /* --- Project Card --- */
 .project-card {
     background: var(--bg-surface);
@@ -383,6 +398,284 @@ section >:last-of-type {
 .video-sample video {
     width: 100%;
     border: 2px solid rgba(255, 255, 255, 0.52);
+}
+
+/* --- Section intro --- */
+.section-intro {
+    color: var(--text-muted);
+    max-width: 65ch;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+/* --- Software row (Film + Photo) --- */
+.software-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.software-label {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-right: 0.25rem;
+}
+
+.software-chip {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: border-color var(--ease), color var(--ease);
+}
+
+.software-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* --- Gear --- */
+.gear-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.gear-category {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    transition: border-color var(--ease);
+}
+
+.gear-category:hover {
+    border-color: var(--accent);
+}
+
+.gear-category-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+}
+
+.gear-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gear-list li {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    padding-left: 0.9rem;
+    position: relative;
+}
+
+.gear-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--border);
+    font-size: 0.75rem;
+    top: 0.05em;
+}
+
+/* --- Film & Video --- */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.video-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color var(--ease), transform var(--ease);
+}
+
+.video-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+    max-height: 200px;
+    object-fit: cover;
+    background: #000;
+}
+
+.video-slot-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.06) 0%, rgba(96, 165, 250, 0.02) 100%);
+    border-bottom: 1px dashed rgba(96, 165, 250, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.video-card-info {
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.video-card-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.video-card-info p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.video-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.video-tag {
+    background: rgba(96, 165, 250, 0.08);
+    color: var(--accent);
+    padding: 0.15rem 0.65rem;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* --- Photography --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.photo-slot {
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.06) 0%, rgba(96, 165, 250, 0.02) 100%);
+    border: 1px dashed rgba(96, 165, 250, 0.25);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    overflow: hidden;
+    transition: border-color var(--ease);
+}
+
+.photo-slot:hover {
+    border-color: var(--accent);
+}
+
+.photo-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+/* --- Contact --- */
+#contact {
+    text-align: center;
+}
+
+#contact .section-intro {
+    margin: 0 auto 2rem;
+}
+
+.contact-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    max-width: 540px;
+    margin: 0 auto;
+    transition: border-color var(--ease);
+}
+
+.contact-card:hover {
+    border-color: var(--accent);
+}
+
+.contact-tagline {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 44ch;
+    text-align: center;
+}
+
+.contact-email-btn {
+    display: inline-block;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.7rem 1.75rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    transition: background-color var(--ease), color var(--ease), transform var(--ease);
+}
+
+.contact-email-btn:hover,
+.contact-email-btn:focus-visible {
+    background-color: var(--accent);
+    color: var(--bg);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-socials a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color var(--ease);
+}
+
+.contact-socials a:hover,
+.contact-socials a:focus-visible {
+    color: var(--accent);
+    outline: none;
 }
 
 /* --- Footer --- */
